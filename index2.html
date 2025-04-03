@@ -6,6 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Blog Home - Start Bootstrap Template</title>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="startbootstrap-blog-home-gh-pages/css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="style.css">
@@ -15,10 +16,10 @@
     style="background-image: radial-gradient(circle, rgba(0,0,0,0.2) 1px, transparent 1px);
         background-size: 10px 10px;">
         <!-- Page header with logo and tagline-->
-        <header class="py-5 bg-success border-bottom mb-4">
+        <header class="py-2 bg-success border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder">SargetaQuadrinhos</h1>    
+                    <h1 class="fw-bolder font-['Permanent Marker',cursive]">Sargeta Quadrinhos</h1>    
                 </div>
             </div>
         </header>
@@ -96,9 +97,8 @@
                         <hr class="my-0" />
                         <ul class="pagination justify-content-center my-4">
                             <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
                             <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
-                            <li class="page-item"><a class="page-link" href="index2.html">3</a></li>
+                            <li class="page-item"><a class="page-link" href="index.html">3</a></li>
                             <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
                             <li class="page-item"><a class="page-link" href="index.html">15</a></li>
                             <li class="page-item"><a class="page-link" href="index.html">Older</a></li>
@@ -106,25 +106,52 @@
                     </nav>
                 </div>
                 <!-- Side widgets-->
-                <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Participe da Comunidade</div>
-                        <div class="card-body">
-                            <div class="contato">
-                                <a href="#!"><img class="card-img-top" src="https://yt3.googleusercontent.com/hVPqpBzNp7dZGdki6stMGajiQeyjSPKkfUyadI-vGl7ix558fYw91FhakZC0U7UR03-RJND6Fc8=s900-c-k-c0x00ffffff-no-rj    " alt="..." /></a>
-                            </div>
+               <!-- Widgets Laterais -->
+               <div class="col-lg-4">
+                <!-- Widget de Pesquisa -->
+                <div class="card mb-4">
+                    <div class="card-header">Participe da Comunidade</div>
+                    <div class="card-body">
+                        <div class="contato">
+                            <a href="#!"><img class="card-img-top" src="https://yt3.googleusercontent.com/hVPqpBzNp7dZGdki6stMGajiQeyjSPKkfUyadI-vGl7ix558fYw91FhakZC0U7UR03-RJND6Fc8=s900-c-k-c0x00ffffff-no-rj    " class="rounded mx-auto d-block" alt="..." /></a>
                         </div>
                     </div>
-                    </div>
-                    <!-- Side widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Comentários</div>
+                    <div class="card-body">
+                        <section class="container mt-5">
+                            <h2 class="text-center mb-4">Comentários</h2>
+                            
+                            <!-- Carousel de Comentários -->
+                            <div id="carouselComentarios" class="carousel slide mt-4" data-bs-ride="carousel">
+                                <div class="carousel-inner" id="comentariosContainer">
+                                    <!-- Comentários serão inseridos aqui dinamicamente -->
+                                </div>
+            
+                                <!-- Controles do Carousel -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentarios" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselComentarios" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+            
+                            <!-- Formulário para adicionar comentários -->
+                            <div class="mt-4">
+                                <input type="text" id="novoComentario" class="form-control mb-2" placeholder="Digite seu comentário">
+                                <input type="text" id="novoAutor" class="form-control mb-2" placeholder="Seu nome">
+                                <button class="btn btn-primary" onclick="adicionarComentario()">Adicionar Comentário</button>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </div>
         </div>
+    </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
